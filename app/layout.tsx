@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from '@/lib/constants'
-import { Inter } from "next/font/google";
+import type { Metadata } from 'next';
+import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from '@/lib/constants';
+import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
-import "@/assets/styles/globals.css";
+import '@/assets/styles/globals.css';
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
@@ -23,17 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-    <body className={`${inter.className}`}>
-      <ThemeProvider
-        attribute='class'
-        defaultTheme='light'
-        enableSystem
-        disableTransitionOnChange
-      >
-        {children}
-      </ThemeProvider>
-    </body>
-  </html>
+    <html lang='en' suppressHydrationWarning>
+      <body className={`${inter.className}`}>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='light'
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
