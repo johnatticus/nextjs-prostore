@@ -209,3 +209,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* for bold underline link on sign in page. edit if it jacks up other links */
+.link {
+@apply hover:underline;
+@apply font-bold;
+}
