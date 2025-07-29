@@ -11,3 +11,10 @@ export const LATEST_PRODUCTS_LIMIT =
   email: 'admin@example.com',
   password: '123456',
 };
+
+export const signUpDefaultValues = {
+  name: 'Steve Smith',
+  email: 'steve@example.com',
+  password: 'password',
+  confirmPassword: 'password',
+};
